@@ -11,7 +11,6 @@ public class ShipCrewProblem {
 
         int[] crew = new int[NUMBER_OF_CREW_MEMBERS + 1]; // tutaj przechowuje kazdy mozliwy podzbior
         int[] bestCrew = crew.clone();
-        int bestValueOfQualification = Integer.MIN_VALUE;
         int currentValueOfQualification = 0; // ta zmienna sluzy do reprezentacji kwalifikacji zalogi
         int crewMembers = 0; // ilosc zalogi z potrzebnymi kawlifikacjami
         int bestCrewMembers = Integer.MAX_VALUE; // ilosc zalogi z potrzebnymi kawlifikacjami, im mniej tym lepiej
@@ -29,7 +28,6 @@ public class ShipCrewProblem {
             // tutaj sprawdzam czy wartosc zmiennej currentValueOfQualification osiaga 10(1+2+3+4) i czy liczba zalogi jest mniejsza od ostatniej najlepszej ilosci zalogi
             // jesli tak, to:
             if (currentValueOfQualification == NEEDED_QUALIFICATIONS_VALUE && crewMembers <= bestCrewMembers) {
-                bestValueOfQualification = currentValueOfQualification; // do zmiennej bestValueOfQualification przypisujemy wartosc currentValueOfQualification
                 bestCrewMembers = crewMembers; // do zmiennej bestCrewMembers przypisujemy wartosc crewMembers
                 bestCrew = crew.clone(); // tutaj do zminnej bestCrew przypisujemy aktualny podzbior
             } else {
@@ -52,15 +50,14 @@ public class ShipCrewProblem {
 
         }
 
-        System.out.println("Best Value Of Qualifications: " + bestValueOfQualification);
         System.out.println("Best Number Of Crew Members: " + bestCrewMembers);
         System.out.println("Best Crew That Meet An Expectations: ");
         print(bestCrew);
     }
 
     private static void print(int[] arr) {
-        for (int j : arr) {
-            System.out.print(j);
+        for (int i =0; i < arr.length - 1; i++) {
+            System.out.print(arr[i]);
         }
         System.out.println();
     }
