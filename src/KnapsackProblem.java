@@ -1,4 +1,4 @@
-public class Main {
+public class KnapsackProblem {
     private static final int NUMBER_OF_ITEMS = 6;
     private static final int[] VOLUME_OF_ITEMS = {6, 2, 3, 2, 3, 1};
     private static final int[] VALUE_OF_ITEMS = {6, 4, 5, 7, 10, 2};
