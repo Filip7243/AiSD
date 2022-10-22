@@ -13,15 +13,13 @@ public class IceCreamProblem {
     private static int bestValue = Integer.MAX_VALUE;
     private static String bestCombination = "";
 
-
-
     public static void main(String[] args) {
         createPermutation(0);
         System.out.println(bestValue);
         System.out.println(bestCombination);
     }
 
-    private static void createPermutation(int n) { // i - element listy od któreg zaczynamy
+    private static void createPermutation(int n) { // n - element listy od któreg zaczynamy
 
         if (n == SET_SIZE) { // jeśli zwraca true, to znaczy, że została stworzona kolejna permutacja
             int currentValue = 0;
