@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9fb56d8d-3ac0-4060-b0fd-d0e305df4c22" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ShipCrewProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ShipCrewProblem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IceCreamProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IceCreamProblem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +47,14 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.ShipCrewProblem">
+  <component name="RunManager" selected="Application.IceCreamProblem">
+    <configuration name="IceCreamProblem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="IceCreamProblem" />
+      <module name="KnapsackProblem" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="KnapsackProblem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="KnapsackProblem" />
       <module name="KnapsackProblem" />
@@ -64,6 +71,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.IceCreamProblem" />
         <item itemvalue="Application.ShipCrewProblem" />
         <item itemvalue="Application.KnapsackProblem" />
       </list>
@@ -81,6 +89,7 @@
       <workItem from="1666079330642" duration="56000" />
       <workItem from="1666083295569" duration="596000" />
       <workItem from="1666109929629" duration="3692000" />
+      <workItem from="1666436175540" duration="5642000" />
     </task>
     <servers />
   </component>
