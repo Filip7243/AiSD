@@ -21,7 +21,7 @@ public class IceCreamProblem {
         System.out.println(bestCombination);
     }
 
-    private static void createPermutation(int n) { // i - element listy od któreg zaczynamy
+    private static void createPermutation(int n) { // n - element listy od któreg zaczynamy
 
         if (n == SET_SIZE) { // jeśli zwraca true, to znaczy, że została stworzona kolejna permutacja
             int currentValue = 0;
