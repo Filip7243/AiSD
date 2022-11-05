@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9fb56d8d-3ac0-4060-b0fd-d0e305df4c22" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/FindNumberProblem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/NewtonBinomial.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +47,7 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.FindNumberProblem">
+  <component name="RunManager" selected="Application.NewtonBinomial">
     <configuration name="FindNumberProblem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="FindNumberProblem" />
       <module name="KnapsackProblem" />
@@ -69,6 +69,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NewtonBinomial" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="NewtonBinomial" />
+      <module name="KnapsackProblem" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ShipCrewProblem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ShipCrewProblem" />
       <module name="KnapsackProblem" />
@@ -78,6 +85,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.NewtonBinomial" />
         <item itemvalue="Application.FindNumberProblem" />
         <item itemvalue="Application.IceCreamProblem" />
         <item itemvalue="Application.ShipCrewProblem" />
@@ -100,7 +108,7 @@
       <workItem from="1666436175540" duration="5642000" />
       <workItem from="1666454398815" duration="625000" />
       <workItem from="1666514984246" duration="29000" />
-      <workItem from="1667661276420" duration="706000" />
+      <workItem from="1667661276420" duration="2984000" />
     </task>
     <servers />
   </component>
