@@ -3,10 +3,10 @@ import java.util.Scanner;
 
 public class ChangeProblem {
 
-    private static final Scanner scanner = new Scanner(System.in);
-    private static final Random random = new Random();
+    private static final Scanner SCANNER = new Scanner(System.in);
+    private static final Random RANDOM = new Random();
     private static final int[] COINS = {500, 200, 100, 50, 20, 10, 5, 2, 1}; // grosze
-    private static final int[] amountOfCoins = {1, 1, 5, 0, 0, 0, 0, 0, 1}; // index 0 -> 5, so we have five 5zl, two 2zl, etc...
+    private static final int[] amountOfCoins = {1000, 1, 5, 0, 0, 0, 0, 0, 1}; // index 0 -> 5, so we have five 5zl, two 2zl, etc...
     private static final int COIN_SPENDING_LIMIT = 1000; // 999 + 1
     private static final int DRAW_LIMIT = 100; // it is number of draws(losowań)
 
@@ -22,21 +22,18 @@ public class ChangeProblem {
         System.out.println("Give a change: ");
 
         System.out.print("Zlotych: ");
-        int zl = scanner.nextInt();
+        int zl = SCANNER.nextInt();
         System.out.print("Groszy: ");
-        int gr = scanner.nextInt();
+        int gr = SCANNER.nextInt();
         int change = 0;
 
         for(int i = 0; i < DRAW_LIMIT; i++) {
             change = (zl*100) + gr;
             int amountOfCoinsSpent = 0;
             int[] currentAmountOfCoins = amountOfCoins.clone();
-            if(i == 4) {
-                break;
-            }
 
-            while ((change > 0 && amountOfCoinsSpent <= COIN_SPENDING_LIMIT)) {
-                int randomCoinIndex = random.nextInt(COINS.length);
+            while ((change > 0 && amountOfCoinsSpent < COIN_SPENDING_LIMIT)) {
+                int randomCoinIndex = RANDOM.nextInt(COINS.length);
                 int coin = COINS[randomCoinIndex];
                 int amountOfCoin = currentAmountOfCoins[randomCoinIndex];
                 int lowestAvailableCoin = findLowest(currentAmountOfCoins);
