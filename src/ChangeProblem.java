@@ -6,7 +6,7 @@ public class ChangeProblem {
     private static final Scanner SCANNER = new Scanner(System.in);
     private static final Random RANDOM = new Random();
     private static final int[] COINS = {500, 200, 100, 50, 20, 10, 5, 2, 1}; // grosze
-    private static final int[] amountOfCoins = {1000, 1, 5, 0, 0, 0, 0, 0, 1}; // index 0 -> 5, so we have five 5zl, two 2zl, etc...
+    private static final int[] amountOfCoins = {1, 2, 0, 7, 2, 2, 5, 2, 10}; // index 0 -> 5, so we have five 5zl, two 2zl, etc...
     private static final int COIN_SPENDING_LIMIT = 1000; // 999 + 1
     private static final int DRAW_LIMIT = 100; // it is number of draws(losowań)
 
@@ -15,7 +15,38 @@ public class ChangeProblem {
     private static int[] bestCombinationOfCoinsSpent = new int[COIN_SPENDING_LIMIT];
 
     public static void main(String[] args) {
-        keepYourChangeMonteCarlo();
+        keepYourChangeGreedyAlgorithmWithCoinsLimit(13.49);
+    }
+
+    private static void keepYourChangeGreedyAlgorithm(double change) {
+        int i = 0;
+        change *= 100;
+        while (change > 0) {
+            if (COINS[i] <= change) {
+                System.out.print(COINS[i] / 100.0 + " ");
+                change -= COINS[i];
+            } else {
+                i++;
+            }
+        }
+    }
+
+    private static void keepYourChangeGreedyAlgorithmWithCoinsLimit(double change) {
+        int i = 0;
+        change *= 100;
+
+        while (change > 0 && i < COINS.length) {
+            if (change >= COINS[i] && amountOfCoins[i] > 0) {
+                System.out.print(COINS[i] / 100.0 + " ");
+                change -= COINS[i];
+                amountOfCoins[i]--;
+            } else {
+                i++;
+            }
+        }
+
+        System.out.println();
+        System.out.println("REST OF CHANGE: " + change);
     }
 
     private static void keepYourChangeMonteCarlo() {
@@ -27,8 +58,8 @@ public class ChangeProblem {
         int gr = SCANNER.nextInt();
         int change = 0;
 
-        for(int i = 0; i < DRAW_LIMIT; i++) {
-            change = (zl*100) + gr;
+        for (int i = 0; i < DRAW_LIMIT; i++) {
+            change = (zl * 100) + gr;
             int amountOfCoinsSpent = 0;
             int[] currentAmountOfCoins = amountOfCoins.clone();
 
@@ -37,39 +68,39 @@ public class ChangeProblem {
                 int coin = COINS[randomCoinIndex];
                 int amountOfCoin = currentAmountOfCoins[randomCoinIndex];
                 int lowestAvailableCoin = findLowest(currentAmountOfCoins);
-                if(lowestAvailableCoin > change) {
+                if (lowestAvailableCoin > change) {
                     break;
                 }
-                if(coin <= change && amountOfCoin > 0) {
+                if (coin <= change && amountOfCoin > 0) {
                     coinsSpent[amountOfCoinsSpent] = coin;
                     currentAmountOfCoins[randomCoinIndex]--;
                     change -= coin;
                     amountOfCoinsSpent++;
                 }
             }
-            if(amountOfCoinsSpent < bestAmountOfCoinsSpent && change == 0.0) {
+            if (amountOfCoinsSpent < bestAmountOfCoinsSpent && change == 0.0) {
                 bestAmountOfCoinsSpent = amountOfCoinsSpent;
-                for(int j = 0; j < bestAmountOfCoinsSpent; j++) {
+                for (int j = 0; j < bestAmountOfCoinsSpent; j++) {
                     bestCombinationOfCoinsSpent[j] = coinsSpent[j];
                 }
             }
         }
 
-        if(bestAmountOfCoinsSpent < COIN_SPENDING_LIMIT) {
+        if (bestAmountOfCoinsSpent < COIN_SPENDING_LIMIT) {
             System.out.println("Change: ");
-            for(int i = 0; i < bestAmountOfCoinsSpent; i++) {
-                System.out.print(bestCombinationOfCoinsSpent[i]/100.0 + " ");
+            for (int i = 0; i < bestAmountOfCoinsSpent; i++) {
+                System.out.print(bestCombinationOfCoinsSpent[i] / 100.0 + " ");
             }
         } else {
             System.out.println("There is no solution");
         }
     }
 
-    private static int findLowest(int[]amountOfCoins) {
+    private static int findLowest(int[] amountOfCoins) {
         int lowest = Integer.MAX_VALUE;
-        for(int i = 0; i < COINS.length; i++) {
-            if(amountOfCoins[i] != 0) {
-                if(COINS[i] < lowest) {
+        for (int i = 0; i < COINS.length; i++) {
+            if (amountOfCoins[i] != 0) {
+                if (COINS[i] < lowest) {
                     lowest = COINS[i];
                 }
             }
