@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9fb56d8d-3ac0-4060-b0fd-d0e305df4c22" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/NewtonBinomial.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Field.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ChangeProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChangeProblem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,23 +48,23 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.NewtonBinomial">
+  <component name="RunManager" selected="Application.Field">
+    <configuration name="ChangeProblem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChangeProblem" />
+      <module name="KnapsackProblem" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Field" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Field" />
+      <module name="KnapsackProblem" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FindNumberProblem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="FindNumberProblem" />
-      <module name="KnapsackProblem" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="IceCreamProblem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="IceCreamProblem" />
-      <module name="KnapsackProblem" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="KnapsackProblem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="KnapsackProblem" />
       <module name="KnapsackProblem" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -76,8 +77,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShipCrewProblem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ShipCrewProblem" />
+    <configuration name="abc" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="abc" />
       <module name="KnapsackProblem" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -85,11 +86,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Field" />
+        <item itemvalue="Application.ChangeProblem" />
+        <item itemvalue="Application.abc" />
         <item itemvalue="Application.NewtonBinomial" />
         <item itemvalue="Application.FindNumberProblem" />
-        <item itemvalue="Application.IceCreamProblem" />
-        <item itemvalue="Application.ShipCrewProblem" />
-        <item itemvalue="Application.KnapsackProblem" />
       </list>
     </recent_temporary>
   </component>
@@ -114,7 +115,12 @@
       <workItem from="1666454398815" duration="625000" />
       <workItem from="1666514984246" duration="29000" />
       <workItem from="1667661276420" duration="2984000" />
+<<<<<<< HEAD
 >>>>>>> 85820a8a96045d4e16fec54ddc7781064db2dc25
+=======
+      <workItem from="1668859107781" duration="11954000" />
+      <workItem from="1668874830846" duration="2899000" />
+>>>>>>> e484f1f1c3d78aae907cc5cbf4996ed09ad9e5b9
     </task>
     <servers />
   </component>
